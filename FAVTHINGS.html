@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Favourite Things</title>
+
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+.navbar {
+    background-color: #ffcee6;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 3px solid #f4a4c1;
+}
+
+.navbar a {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    text-decoration: none;
+    color: #b33863;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: white;
+    background: #d1668f;
+    padding: 8px 15px;
+    border-radius: 12px;
+}
+
+body {
+    background-color: #FDEDF4;
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    font-size: 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 36px;
+    color: #C55977;
+}
+
+
+.fav-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.fav-box {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.fav-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #C55977;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.fav-box ul {
+    padding-left: 20px;
+}
+
+
+.movie-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.movie-title {
+    font-size: 32px;
+    color: #C55977;
+}
+
+.movie-box {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+.influencer-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.influencer-card {
+    width: 260px;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.influencer-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffb6cf;
+}
+
+.influencer-card h3 {
+    color: #b33863;
+}
+
+
+.ig-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 18px;
+    background: #ffb6cf;
+    color: #b33863;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.ig-btn:hover {
+    background: #d1668f;
+    color: white;
+}
+
+
+footer {
+    background: #000;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footerNav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.footerBottom {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="ABOUTME.html">About Me</a>
+    <a href="FAVTHINGS.html">Favourite Things</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="EDU.html">Education</a>
+</div>
+
+<h2 class="page-title">Favourite Things</h2>
+
+
+<div class="fav-container">
+
+<div class="fav-box">
+    <div class="fav-title">Foods</div>
+    <ul>
+        <li>Homecooked by mom</li>
+        <li>Sushi</li>
+        <li>Char Kuey Teow</li>
+        <li>Chicken Rice</li>
+        <li>Ayam Gunting</li>
+    </ul>
+</div>
+
+<div class="fav-box">
+    <div class="fav-title">Sports</div>
+    <ul>
+        <li>Cycling</li>
+        <li>Badminton</li>
+        <li>Netball</li>
+    </ul>
+</div>
+
+<div class="fav-box">
+    <div class="fav-title">Movies / Shows</div>
+    <ul>
+        <li>Istanbul Aku Datang</li>
+        <li>Divergent</li>
+        <li>Friends</li>
+        <li>Cinderella</li>
+    </ul>
+</div>
+
+<div class="fav-box">
+    <div class="fav-title">Song</div>
+    <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/track/4kZRpJFtIz1ViPLUfMzJIN"
+        width="100%" height="352" frameborder="0" allow="autoplay; encrypted-media">
+    </iframe>
+</div>
+
+</div>
+
+<div class="movie-container">
+<h2 class="movie-title">My Favourite Movie</h2>
+
+<div class="movie-box">
+<a href="https://www.youtube.com/watch?v=LfR8Su4ulX0" target="_blank">
+<img src="https://img.youtube.com/vi/LfR8Su4ulX0/hqdefault.jpg" style="width:100%; border-radius:15px;">
+</a>
+</div>
+</div>
+
+
+<h2 class="page-title">My Favourite Influencers</h2>
+
+<div class="influencer-container">
+
+<div class="influencer-card">
+<img src="nina.jpg">
+<h3>Khainina Khalil</h3>
+<p>Fashion & lifestyle influencer.</p>
+<a href="https://instagram.com/khaininakhalil" class="ig-btn">Instagram</a>
+</div>
+
+<div class="influencer-card">
+<img src="sofea.jpg">
+<h3>Sofea Shra</h3>
+<p>Beauty & lifestyle content creator.</p>
+<a href="https://instagram.com/sofeashra" class="ig-btn">Instagram</a>
+</div>
+
+<div class="influencer-card">
+<img src="amanda.jpeg">
+<h3>Amanda Amry</h3>
+<p>Actress & social media personality.</p>
+<a href="https://instagram.com/amandaamry" class="ig-btn">Instagram</a>
+</div>
+
+</div>
+<footer>
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="CONTACTME.html">Contact Me</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footerBottom">
+        <p>Copyright &copy;2025; Designed by <span class="designer">Aby</span></p>
+    </div>
+</footer>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-size: 20px;
+            background: #FDEDF4;
+            font-family: 'EB Garamond', serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+.navbar {
+    background-color: #ffcee6;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 3px solid #f4a4c1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.navbar a {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    text-decoration: none;
+    color: #b33863;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: white;
+    background: #d1668f;
+    padding: 8px 15px;
+    border-radius: 12px;
+}
+
+        .container {
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+
+        input[type="email"] {
+            width: 70%;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 2px solid #d186a4;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 25px;
+            background: #ff7baf;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #d94c86;
+        }
+
+        #contact-info {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .contact-links a {
+            display: block;
+            margin: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: #b33863;
+            font-weight: bold;
+        }
+
+        .contact-links a:hover {
+            color: #ff4b8b;
+        }
+
+        iframe {
+            width: 100%;
+            height: 320px;
+            border: none;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+   <div class="navbar">
+
+    <a href="index.html">Home</a>
+    <a href="ABOUTME.html">About Me</a>
+    <a href="FAVTHINGS.html">Favourite Things</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+</div>
+<body>
+ 
+    </div>
+    <h1>Contact Me</h1>
+
+    <div class="container">
+        <h2>Enter your email first</h2>
+
+        <input type="email" id="emailInput" placeholder="Enter your email..." required>
+        <br>
+        <button onclick="showInfo()">Submit</button>
+
+
+        <div id="contact-info">
+
+            <h2>My Location</h2>
+
+    
+            <iframe 
+              src="https://www.google.com/maps?q=32,+Jalan+Sri+Sutera+2,+Taman+Sri+Sutera+Fasa+2/2,+Alor+Gajah,+78000,+Melaka&output=embed">
+            </iframe>
+
+            <h2>Contact Me Through</h2>
+
+            <div class="contact-links">
+                <a href="https://wa.me/601116067422" target="_blank">WhatsApp Me</a>
+                <a href="https://www.instagram.com/abyanaizazii" target="_blank">Instagram</a>
+                <a href="mailto:abyzaid261@GMAIL.COM"> Gmail</a>
+                <a href="https://t.me/abyizazi" target="_blank">Telegram</a>
+            </div>
+        </div>
+    </div>
+
+<script>
+function showInfo() {
+    let email = document.getElementById("emailInput").value;
+
+    if (email === "") {
+        alert("Please enter your email!");
+        return;
+    }
+
+    document.getElementById("contact-info").style.display = "block";
+}
+</script>
+
+</body>
+</html>
+

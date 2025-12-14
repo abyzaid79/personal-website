@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Education Timeline</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" 
+    rel="stylesheet">
+
+    <style>
+
+        body {
+            font-size: 20px;
+            background-color: #fdebf3;
+            font-family: 'EB Garamond', serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #c24b72;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.navbar {
+    background-color: #ffcee6;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 3px solid #f4a4c1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.navbar a {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    text-decoration: none;
+    color: #b33863;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    color: white;
+    background: #d1668f;
+    padding: 8px 15px;
+    border-radius: 12px;
+}
+        .container {
+            padding: 20px;
+            position: relative;
+            width: 30%;
+        }
+
+
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+       .container {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;   
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #c24b72;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #b33863;
+        }
+
+        .year {
+            font-size: 20px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .memory-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .memory-title {
+            font-size: 34px;
+            font-weight: bold;
+            color: #c24b72;
+            margin-bottom: 25px;
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .memory-box {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .memory-box img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .memory-caption {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #444;
+        }
+.edu-main-title {
+    text-align: center;
+    font-size: 36px;
+    color: #C55977;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.edu-gallery {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.edu-box {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.edu-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b33863;
+    margin-bottom: 10px;
+}
+
+.edu-slideshow img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: none;
+}
+.study-location {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffe6f2;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.study-location h3 {
+    text-align: center;
+    color: #c24b72;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #c24b72;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.edu-table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-size: 20px;
+    font-family: 'EB Garamond', serif;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.edu-table th {
+    background: #ffcee6;
+    color: #b33863;
+    font-weight: bold;
+    padding: 15px;
+    border-bottom: 3px solid #f4a4c1;
+    text-align: center;
+}
+
+.edu-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f7d5e6;
+    color: #444;
+}
+
+.edu-table tr:hover {
+    background: #ffe6f3;
+    transition: 0.3s;
+}
+.video-wrapper {
+    text-align: center; 
+    margin-top: 40px;
+}
+
+.video-wrapper video {
+    width: 50%; /* boleh adjust 50–70% ikut suka */
+    border: 5px solid #ffcee6;  /* soft pink */
+    border-radius: 15px; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    display: block;
+    margin: 0 auto;
+}
+
+    </style>
+</head>
+
+<body>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="ABOUTME.html">About Me</a>
+    <a href="FAVTHINGS.html">Favourite Things</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="EDU.html">Education</a>
+</div>
+</div>
+
+<h2 class="section-title">Education Info</h2>
+
+<table class="edu-table">
+    <tr>
+
+        <th>School Logo</th>
+        <th>School</th>
+        <th>Year</th>
+        <th>Achievements</th>
+        
+    </tr>
+
+    <tr>
+         <td>
+            <img src="skba.jpeg" 
+                 width="80">
+            <br>
+            <a href="https://ms.wikipedia.org/wiki/Sekolah_Kebangsaan_Bandar_Anggerik" target="_blank">View Wiki</a>
+        </td> 
+        <td>Sekolah Kebangsaan Bandar Anggerik (Pre-school)</td>
+        <td>2009 - 2012</td>
+        <td>
+            <ol type="1">
+                
+            <li>Managed to get top 1 in class and batch every year</li>
+            <li>Got to experience being a class leader</li>
+            </ol>
+        </td>
+           
+    </tr>
+
+   <tr>
+         <td>
+            <img src="sks6.jpeg" 
+                 width="80">
+            <br>
+            <a href="https://ms.wikipedia.org/wiki/Sekolah_Kebangsaan_Seksyen_Enam" target="_blank">View Wiki</a>
+        </td> 
+        <td>Sekolah Kebangsaan Seksyen 6</td>
+        <td>2012 - 2013</td>
+         <td>
+            <ol type="1">
+                
+            <li>Managed to get top 1 in class and batch every year</li>
+            <li>Got to experience being a class leader</li>
+            </ol>
+        </td>
+           
+    </tr>
+
+   <tr>
+         <td>
+            <img src="sklb.jpeg" 
+                 width="80">
+            <br>
+            <a href="https://ms.wikipedia.org/wiki/Sekolah_Kebangsaan_Lesong_Batu" target="_blank">View Wiki</a>
+        </td> 
+        <td>Sekolah Kebangsaan Lesong Batu</td>
+        <td>2014 - 2017</td>
+      <td>
+            <ol type="1">
+            <li>Got to experience being an assistant class leader</li>
+            <li>Participated in hafazan, nasheed and tilawah Al-Quran competition</li>
+            <li>Used to be a school prefect</li>
+            <li> Managed to get top 10 in batch every year</li>
+            <li>Joined every camping activities that my club recommend for extracurricular marks</li>
+            </ol>
+        </td>
+           
+    </tr>
+
+   <tr>
+         <td>
+            <img src="sharodz.jpg" 
+                 width="80">
+            <br>
+            <a href="https://ms.wikipedia.org/wiki/Sekolah_Menengah_Kebangsaan_Agama_Sharifah_Rodziah" target="_blank">View Wiki</a>
+        </td> 
+        <td>Sekolah Menengah Kebangsaan Agama Sharifah Rodziah</td>
+        <td>2018 - 2018</td>
+        <td>
+          <ol type="1">  
+            <li>Joined every activites that the school offers</li>
+            <li>Joined their nasheed team</li>
+          </ol>
+        </td>
+           
+    </tr>
+
+   <tr>
+         <td>
+            <img src="rembau.png" 
+                 width="80">
+            <br>
+            <a href="https://en.wikipedia.org/wiki/SMS_Rembau" target="_blank">View Wiki</a>
+        </td> 
+        <td>Sekolah Menengah Sains Rembau</td>
+        <td>2018 - 2022</td>
+        <td>
+            <ol type="1">
+           <li>Joined every activities that the school offers</li>
+           <li>Used to be an assistant class leader in form 5</li>
+           <li>Joined the netball team</li>
+           <li>participate in many workshops</li>
+           </ol>
+        </td>
+           
+    </tr>
+
+   <tr>
+         <td>
+            <img src="logo uitm.jpeg" 
+                 width="80">
+            <br>
+            <a href="https://ms.wikipedia.org/wiki/UiTM_Kampus_Segamat" target="_blank">View Wiki</a>
+        </td> 
+        <td>UITM Segamat</td>
+        <td>2023 - Now</td>
+        <td>
+        <ol type="1">
+        <li>Joined many programs and talks to collect merit</li>
+        <li>Managed to get Dean's List few times</li>
+        <li>Getting new knowlegdes and experiences everyday</li>
+        </ol>
+    </td>      
+    </tr>
+
+</table>
+
+    </div>
+<section id="study-map">
+    <h2 class="section-title">My Study Journey Map</h2>
+
+    <div class="study-location">
+        <h3>SK Bandar Anggerik</h3>
+       <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.112861036737!2d101.52614977496423!3d3.0580332533225583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c94391609c7%3A0x3a480b8b3bc7ec37!2sSK%20Bandar%20Anggerik!5e0!3m2!1sen!2smy!4v1736401000000!5m2!1sen!2smy" 
+    width="100%" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+
+    </div>
+
+    <div class="study-location">
+        <h3>SK Seksyen 6</h3>
+        <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.045289726846!2d101.5306547749643!3d3.072935752994141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c95b69d2f0d%3A0xbeb7d26ab3c3ef99!2sSk%20Seksyen%206%2C%20Shah%20Alam!5e0!3m2!1sen!2smy!4v1736401200000!5m2!1sen!2smy" 
+    width="100%" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+
+    </div>
+
+     <div class="study-location">
+        <h3>SK Lesong Batu</h3>
+        <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7963.278764947617!2d102.217065!3d2.378672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d0ca1e9ad3060b%3A0x1baf5114d7a2a97c!2sSekolah%20Kebangsaan%20Lesong%20Batu!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy" 
+    width="100%" 
+    height="300" 
+    style="border:0; border-radius: 15px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+    </div>
+
+<div class="study-location">
+    <h3>SM Sains Rembau</h3>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.593838262016!2d102.3746140749607!3d2.5455407571807995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31ce76d868b8ae4f%3A0xaea3d5c2e32e52c3!2sSekolah%20Menengah%20Sains%20Rembau%20(SEMSRA)!5e0!3m2!1sen!2smy!4v1736401400000!5m2!1sen!2smy"
+        width="100%"
+        height="300"
+        style="border:0; border-radius:15px; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+<div class="study-location">
+        <h3>SMKA Sharifah Rodziah</h3>
+      <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7961.982942976427!2d102.295345!3d2.237955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d0f1b61e24be4f%3A0x6ff73d5c4c2baa14!2sSekolah%20Menengah%20Kebangsaan%20Agama%20Sharifah%20Rodziah!5e0!3m2!1sen!2smy!4v1700000000001!5m2!1sen!2smy"
+    width="100%"
+    height="300"
+    style="border:0; border-radius: 15px;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+ 
+
+    </div>
+    <div class="study-location">
+        <h3>UITM Segamat</h3>
+       <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967.71629983706!2d102.82085094186559!3d2.5031202350658395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cfd8d39b1b2adb%3A0xa5178891cae6f90c!2sUniversiti%20Teknologi%20MARA%20(UiTM)%20Johor%20Kampus%20Segamat!5e0!3m2!1sen!2smy!4v1736401500000!5m2!1sen!2smy" 
+    width="100%" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+
+    </div>
+
+</section>
+
+<h2 class="edu-main-title">My Education Memories</h2>
+
+<div class="edu-gallery">
+
+    <div class="edu-box">
+        <h3 class="edu-title">Preschool</h3>
+
+        <div class="edu-slideshow preschool">
+            <img class="edu-slide preschool" src="pra1.jpeg">
+            <img class="edu-slide preschool" src="pra2.jpeg">
+            <img class="edu-slide preschool" src="pra3.jpeg">
+        </div>
+    </div>
+
+    <div class="edu-box">
+        <h3 class="edu-title">Primary School</h3>
+
+        <div class="edu-slideshow primary">
+            <img class="edu-slide primary" src="pri1.jpg">
+            <img class="edu-slide primary" src="pri2.jpg">
+            <img class="edu-slide primary" src="pri3.jpg">
+        </div>
+    </div>
+
+
+    <div class="edu-box">
+        <h3 class="edu-title">High School</h3>
+
+        <div class="edu-slideshow high">
+            <img class="edu-slide high" src="semesra.JPG">
+            <img class="edu-slide high" src="semesra2.JPG">
+            <img class="edu-slide high" src="semesra3.JPG">
+        </div>
+    </div>
+
+    <div class="edu-box">
+        <h3 class="edu-title">Diploma (UiTM)</h3>
+
+        <div class="edu-slideshow dip">
+            <img class="edu-slide dip" src="uitm1.jpeg">
+            <img class="edu-slide dip" src="uitm2.jpeg">
+            <img class="edu-slide dip" src="uitm3.jpeg">
+        </div>
+    </div>
+
+</div>
+<h2 class="section-title">Last video with batchmates</h2>
+
+<div class="video-wrapper">
+    <video controls>
+        <source src="videohs.MP4" type="video/mp4"> 
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+</body>
+</html>
+
+<script>
+function autoSlide(className) {
+    let index = 0;
+    const slides = document.getElementsByClassName("edu-slide " + className);
+
+    function showSlides() {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        index++;
+        if (index > slides.length) { index = 1; }
+
+        slides[index - 1].style.display = "block";
+        setTimeout(showSlides, 2500);
+    }
+
+    showSlides();
+}
+autoSlide("preschool");
+autoSlide("primary");
+autoSlide("high");
+autoSlide("dip");
+</script>
+
+<script>
+function openPopup(id) {
+  document.getElementById("popup-" + id).style.display = "block";
+}
+
+function closePopup(id) {
+  document.getElementById("popup-" + id).style.display = "none";
+}
+</script>
+<script>
+function openPopup(id) {
+    document.getElementById("popup-" + id).style.display = "block";
+}
+
+function closePopup(id) {
+    document.getElementById("popup-" + id).style.display = "none";
+}
+
+let index = 0;
+function showMemorySlides() {
+    let slides = document.getElementsByClassName("memory-slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    index++;
+    if (index > slides.length) { index = 1 }
+
+    slides[index - 1].style.display = "block";
+
+    setTimeout(showMemorySlides, 2000);
+}
+showMemorySlides();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Happy Family</title>
+
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-size:20px;
+    font-family:'EB Garamond', serif;
+    background:#fde7f2;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+
+.navbar{
+    background:#ffcee6;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    border-bottom:3px solid #f4a4c1;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+.navbar a{
+    font-size:22px;
+    text-decoration:none;
+    color:#b33863;
+    font-weight:600;
+    transition:.3s;
+}
+.navbar a:hover{
+    background:#d1668f;
+    color:white;
+    padding:8px 15px;
+    border-radius:12px;
+}
+
+
+h1{
+    margin-top:40px;
+    font-size:40px;
+    color:#b03c64;
+}
+
+
+.family-section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+    max-width:1100px;
+    margin:40px auto;
+}
+.card{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:15px;
+}
+.card-title{
+    font-size:22px;
+    color:#b03c64;
+    margin-top:15px;
+    font-weight:bold;
+}
+.card-subtitle{
+    font-size:15px;
+    color:#555;
+}
+
+
+.family-tree{
+    margin:60px auto;
+    max-width:900px;
+}
+.tree-parents{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    margin-bottom:40px;
+}
+.parent-box{
+    background:#f8aecb;
+    padding:25px 40px;
+    border-radius:20px;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+.love-icon{font-size:40px;}
+
+.tree-children{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+.tree-box{
+    background:white;
+    padding:20px 25px;
+    border-radius:18px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
+    font-weight:600;
+}
+
+.polaroid-gallery{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin:40px auto;
+}
+.polaroid{
+    background:white;
+    width:200px;
+    padding:10px 10px 20px;
+    border-radius:10px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.15);
+    transform:rotate(-4deg);
+    transition:.3s;
+    cursor:pointer;
+}
+.polaroid:nth-child(2){transform:rotate(3deg);}
+.polaroid img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:6px;
+}
+.polaroid:hover{
+    transform:rotate(0) scale(1.05);
+}
+
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    padding:10px;
+}
+.modal-content{
+    position:relative;
+}
+.modal-content img{
+    width:auto;
+    height:auto;
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+    object-fit:contain;
+}
+.close{
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+    z-index:1000;
+}
+.nav-btn{
+    position:absolute;
+    top:50%;
+    font-size:50px;
+    color:white;
+    cursor:pointer;
+    transform:translateY(-50%);
+    z-index:1000;
+}
+.nav-btn.left{left:30px;}
+.nav-btn.right{right:30px;}
+
+
+footer {
+    background: #000;
+    padding: 20px;
+    margin-top: 50px;
+}
+.footerNav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+.footerNav ul li a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+.footerBottom {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="ABOUTME.html">About Me</a>
+    <a href="FAVTHINGS.html">Favourite Things</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="EDU.html">Education</a>
+</div>
+
+<h1>My Happy Family 🥰</h1>
+
+<div class="family-section">
+    <div class="card"><img src="mama.JPG"><div class="card-title">Lismawati binti Ishak</div><div class="card-subtitle">Our superwoman</div></div>
+    <div class="card"><img src="babah.jpg"><div class="card-title">Zaid bin Mohd Nor</div><div class="card-subtitle">Our hero</div></div>
+    <div class="card"><img src="abysib.jpeg"><div class="card-title">Abyana Izazi</div><div class="card-subtitle">First born</div></div>
+    <div class="card"><img src="ucop.JPG"><div class="card-title">Umar Yusuff</div><div class="card-subtitle">Second born</div></div>
+    <div class="card"><img src="aryssa.png"><div class="card-title">Aryssa Khadeeja</div><div class="card-subtitle">Third born</div></div>
+    <div class="card"><img src="uthman.jpeg"><div class="card-title">Uthman Ziyad</div><div class="card-subtitle">Last born</div></div>
+</div>
+
+<div class="family-tree">
+<h2 style="color:#b03c64">Family Tree</h2>
+<div class="tree-parents">
+    <div class="parent-box">Lismawati</div>
+    <div class="love-icon">💗</div>
+    <div class="parent-box">Zaid</div>
+</div>
+<div class="tree-children">
+    <div class="tree-box">Abyana Izazi<br><span>20 (2005)</span></div>
+    <div class="tree-box">Umar Yusuff<br><span>16 (2009)</span></div>
+    <div class="tree-box">Aryssa Khadeeja<br><span>12 (2013)</span></div>
+    <div class="tree-box">Uthman Ziyad<br><span>9 (2016)</span></div>
+</div>
+</div>
+
+<div class="polaroid-gallery">
+    <div class="polaroid" onclick="openGallery(1)">
+        <img src="hol.jpg"><p>Holiday</p>
+    </div>
+    <div class="polaroid" onclick="openGallery(2)">
+        <img src="raya8.jpeg"><p>Raya</p>
+    </div>
+</div>
+
+<div id="galleryModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="modalImage">
+        <div class="nav-btn left" onclick="prevImage()">&#10094;</div>
+        <div class="nav-btn right" onclick="nextImage()">&#10095;</div>
+    </div>
+</div>
+
+<footer>
+    <div class="footerNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="CONTACTME.html">Contact Me</a></li>
+        </ul>
+    </div>
+    <div class="footerBottom">
+        <p>Copyright &copy;2025; Designed by <span class="designer">Aby</span></p>
+    </div>
+</footer>
+
+<script>
+let currentGallery=0,currentIndex=0;
+const galleries={
+  1:["holi1.jpg","holi2.jpeg","holi3.jpeg","holi4.jpg"],
+  2:["raya1.jpeg","raya2.jpeg","raya3.jpeg","raya4.jpeg"]
+};
+function openGallery(n){
+    currentGallery=n;
+    currentIndex=0;
+    document.getElementById("modalImage").src=galleries[n][0];
+    document.getElementById("galleryModal").style.display="flex";
+}
+function closeGallery(){document.getElementById("galleryModal").style.display="none";}
+function nextImage(){
+    currentIndex=(currentIndex+1)%galleries[currentGallery].length;
+    document.getElementById("modalImage").src=galleries[currentGallery][currentIndex];
+}
+function prevImage(){
+    currentIndex=(currentIndex-1+galleries[currentGallery].length)%galleries[currentGallery].length;
+    document.getElementById("modalImage").src=galleries[currentGallery][currentIndex];
+}
+</script>
+
+</body>
+</html>

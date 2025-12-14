@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>My Gallery</title>
+
+    <style>
+        body {
+            font-size: 20px;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(to bottom,#f9d4f9,#f676ce,#ffffff);
+            color: #555;
+        }
+.music-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.music-container audio {
+    width: 300px;
+}
+.song-note {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #f0f0f0;
+    font-style: italic;
+}
+
+
+       .navbar {
+            background: linear-gradient(to right,#dddddd,#ffffff);
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .navbar .home-btn {
+            background: white;
+            color: #ea7ec6;
+            padding: 6px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .title-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .title-section h1 {
+            color: #ff30a9;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .title-section p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 15px;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 25px auto;
+            flex-wrap: wrap;
+            width: 90%;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 25px;
+            width: 150px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 22px;
+            color: #ff3586;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #fd9ffd;
+        }
+
+        .gallery-section {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 30px 20px;
+            max-width: 900px;   
+            margin: auto; 
+        }
+
+        .gallery-card {
+            background: white;
+            width: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 4px 16px rgba(0,0,0,0.15);
+            text-align: center;
+            padding-bottom: 18px;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .gallery-card h3 {
+            margin-top: 12px;
+            color: #ff8ae0;
+        }
+
+        .gallery-card p {
+            font-size: 13px;
+            padding: 0 15px;
+            color: #666;
+        }
+
+        .btn-view {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: linear-gradient(to right,#f9aaff,#ff44dd);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.popup-content {
+    text-align: center;
+    margin: 80px auto 10px;
+    width: 60%;
+    max-width: 600px;
+}
+
+.popup-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.thumbnail-row {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.thumbnail-row img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.thumbnail-row img:hover {
+    transform: scale(1.1);
+}
+footer {
+    background: #000;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footerNav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.footerBottom {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div>📸 MY MOMENTS</div>
+    <a href="index.html">Home</a>
+    <a href="ABOUTME.html">About Me</a>
+    <a href="FAVTHINGS.html">Favourite Things</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="EDU.html">Education</a>
+</div>
+    </div>
+<div class="music-container">
+    <audio controls autoplay loop>
+        <source src="Always.mp3" type="audio/mp3">
+        Your browser does not support audio.
+    </audio>
+
+    <p class="song-note">
+       (play this song while scrolling.)
+    </p>
+</div>
+
+    <div class="title-section">
+        <h1>My Gallery</h1>
+        <p>
+           ! Enjoy !
+        </p>
+    </div>
+
+
+   <div class="gallery-section">
+
+    <div class="gallery-card">
+        <img src="self1.jpeg" alt="Selfies"> 
+        <h3>Selfies</h3>
+        <p>#selflove</p>
+        <button class="btn-view" onclick="openGallery('selfies')">View Photos</button>
+    </div>
+
+    <div class="gallery-card">
+        <img src="fam1.jpeg" alt="Family"> 
+        <h3>Family</h3>
+        <p>My backbone.</p>
+        <button class="btn-view" onclick="openGallery('family')">View Photos</button>
+    </div>
+
+    <div class="gallery-card">
+        <img src="fren1.jpeg" alt="Friends"> 
+        <h3>Friends</h3>
+        <p>Different people give different kindness.</p>
+        <button class="btn-view" onclick="openGallery('friends')">View Photos</button>
+    </div>
+
+    <div class="gallery-card">
+        <img src="memo1.jpeg" alt="Memories"> 
+        <h3>Memories</h3>
+        <p>Each picture tells stories.</p>
+        <button class="btn-view" onclick="openGallery('memories')">View Photos</button>
+    </div>
+
+    <div class="gallery-card">
+        <img src="fav1.jpeg" alt="Favs"> 
+        <h3>Favs</h3>
+        <p>Things that make me happy.</p>
+        <button class="btn-view" onclick="openGallery('favs')">View Photos</button>
+    </div>
+
+    <div class="gallery-card">
+        <img src="mkn1.jpeg" alt="Foods"> 
+        <h3>Foods</h3>
+        <p>Favorite foods I enjoy.</p>
+        <button class="btn-view" onclick="openGallery('foods')">View Photos</button>
+    </div>
+
+</div>
+
+
+<div id="popupGallery" class="popup">
+    <span class="close" onclick="closeGallery()">&times;</span>
+
+    <div class="popup-content">
+        <img class="popup-img" id="popupImage">
+    </div>
+
+    <div class="thumbnail-row" id="thumbnailRow"></div>
+</div>
+<footer>
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="CONTACTME.html">Contact Me</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footerBottom">
+        <p>Copyright &copy;2025; Designed by <span class="designer">Aby</span></p>
+    </div>
+</footer>
+<script>
+const galleryImages = {
+    selfies: [
+        "me1.jpeg",
+        "me2.jpeg",
+        "me3.jpeg",
+        "me4.jpeg",
+        "me5.jpeg",
+        "me6.jpeg",
+        "me7.jpeg",
+        "me8.jpeg",
+        "me9.jpeg",
+        "me10.jpeg"
+    ],
+
+    family: [
+        "fam1.jpeg",
+        "fam2.jpeg",
+        "fam3.jpeg",
+        "fam4.jpeg",
+        "fam5.jpeg",
+        "fam6.jpeg",
+        "fam7.jpeg",
+        "fam8.jpeg",
+        "fam9.jpeg",
+        "fam10.jpeg"
+    ],
+
+    friends: [
+        "fren2.jpeg",
+        "fren3.jpeg",
+        "fren4.jpeg",
+        "fren5.jpeg",
+        "fren6.jpeg",
+        "fren7.jpeg",
+        "fren8.jpeg",
+        "fren9.jpeg",
+        "fren10.jpeg"
+    ],
+
+    memories: [
+        "memo2.jpeg",
+        "memo3.jpeg",
+        "memo4.jpeg",
+        "memo5.jpeg",
+        "memo6.jpeg",
+        "memo7.jpeg",
+        "memo8.jpeg",
+        "memo9.jpeg",
+        "memo10.jpeg"
+    ],
+
+    favs: [
+        "cinta1.jpeg",
+        "cinta2.jpeg",
+        "cinta3.jpeg",
+        "cinta4.jpeg",
+        "cinta5.jpeg",
+        "cinta6.jpeg",
+        "cinta7.jpeg",
+        "cinta8.jpeg",
+        "cinta10.jpeg"
+    ],
+
+    foods: [
+        "mkn1.jpeg",
+        "mkn2.jpeg",
+        "mkn3.jpeg",
+        "mkn4.jpeg",
+        "mkn5.jpeg",
+        "mkn6.jpeg",
+        "mkn7.jpeg",
+        "mkn8.jpeg",
+        "mkn9.jpeg",
+        "mkn10.jpeg"
+    ]
+};
+
+function openGallery(type) {
+    let popup = document.getElementById("popupGallery");
+    let thumbnailRow = document.getElementById("thumbnailRow");
+    let popupImage = document.getElementById("popupImage");
+
+    popup.style.display = "block";
+
+    thumbnailRow.innerHTML = "";
+
+    galleryImages[type].forEach(img => {
+        let thumb = document.createElement("img");
+        thumb.src = img;
+        thumb.onclick = () => showImage(img);
+        thumbnailRow.appendChild(thumb);
+    });
+
+    popupImage.src = galleryImages[type][0];
+}
+
+function showImage(src) {
+    document.getElementById("popupImage").src = src;
+}
+
+function closeGallery() {
+    document.getElementById("popupGallery").style.display = "none";
+}
+</script>
+
+
+</body>
+</html>
